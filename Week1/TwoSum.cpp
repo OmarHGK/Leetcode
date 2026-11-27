@@ -1,0 +1,15 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Solution {
+    public : 
+    vector<int> twoSum(vector<int>& nums, int target){
+        for(int l = 0; l < nums.size() ; l++){
+            for(int r = l + 1; r < nums.size(); r++){
+                if( nums[l] + nums[r]  == target) return{l, r};
+            }
+        }
+        return {};
+    }
+};
